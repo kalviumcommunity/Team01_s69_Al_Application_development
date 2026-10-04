@@ -1,0 +1,8 @@
+*.db
+*.db-*
+__pycache__/
+.venv/
+.vendor/
+node_modules/
+.env
+screenshots/
