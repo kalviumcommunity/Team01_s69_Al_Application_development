@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: fieldguide-demo
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py --host 0.0.0.0
+    healthCheckPath: /health
+    envVars:
+      - key: FIELDGUIDE_ADMIN_PASSWORD
+        generateValue: true
+      - key: FIELDGUIDE_TECH_PASSWORD
+        generateValue: true
+# Demo only. Free-tier local SQLite may be lost on redeploy/restart.
+# Retrieve passwords privately from the chosen hosting dashboard, not source control.
