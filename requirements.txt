@@ -1,0 +1,2 @@
+# Optional text-based PDF ingestion. Core app uses Python standard library.
+pypdf==6.1.1
